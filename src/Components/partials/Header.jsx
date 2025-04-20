@@ -9,12 +9,14 @@ function Header({ data }) {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       style={{
-        background: `linear-gradient(rgba(0, 0, 0, 0.19), rgba(0, 0, 0, 0.26), rgba(0, 0, 0, 0.56)), url(https://image.tmdb.org/t/p/original/${data.backdrop_path || data.profile_path})`,
+        background: `linear-gradient(rgba(0, 0, 0, 0.19), rgba(0, 0, 0, 0.26), rgba(0, 0, 0, 0.56)), url(https://image.tmdb.org/t/p/original/${
+          data.backdrop_path || data.profile_path
+        })`,
         backgroundPosition: "center",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
       }}
-      className="w-full h-[60vh] flex flex-col justify-end p-[6.5%] items-start"
+      className="w-full h-[52vh] flex flex-col justify-end p-[6.5%] items-start"
     >
       {/* Title */}
       <motion.h1
@@ -62,10 +64,7 @@ function Header({ data }) {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.9, duration: 0.5 }}
       >
-        <Link
-          
-          className="bg-[#C61B1B] p-3 rounded text-white mt-4 inline-block hover:bg-[#ea8383] transition duration-300"
-        >
+        <Link className="bg-[#C61B1B] p-3 rounded text-white mt-4 inline-block hover:bg-[#ea8383] transition duration-300">
           Watch Trailer
         </Link>
       </motion.div>
